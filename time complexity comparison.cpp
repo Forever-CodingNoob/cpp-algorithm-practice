@@ -22,7 +22,7 @@ int* genArray(int sizee){
     srand(time(NULL));
     int* A=new int[sizee];
     for (int i=0;i<sizee;i++){
-        A[i]=(double)rand()/(RAND_MAX-1)*sizee;
+        A[i]=(double)rand()/(RAND_MAX-1)*sizee;//rand()->0~(RAND_MAX-1)
     }
     return A;
 }
@@ -164,25 +164,25 @@ int main(){
         cout<<"after quicksort:"<<endl;
         quicksort(a,0,sizee-1);
         //showArray(a);
-        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<endl<<endl;
+        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<'s'<<endl<<endl;
 
         t=clock();
         cout<<"after bubblesort:"<<endl;
         bubblesort(b);
         //showArray(b);
-        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<endl<<endl;
+        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<'s'<<endl<<endl;
 
         t=clock();
         cout<<"after mergesort:"<<endl;
         mergesort(c,0,sizee-1);
         //showArray(c);
-        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<endl<<endl;
+        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<'s'<<endl<<endl;
 
         t=clock();
         cout<<"after heapsort:"<<endl;
         heap_sort(d,sizee);
         //showArray(d);
-        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<endl<<endl;
+        cout<<"execution time:"<<(float)(clock()-t)/CLOCKS_PER_SEC<<'s'<<endl<<endl;
 
         delete [] a;
     }
