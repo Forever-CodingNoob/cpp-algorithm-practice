@@ -13,7 +13,7 @@
 </ol>
 </p>
 <p>
-而根據本書，除了bubble sort之時間複雜度為O(n^2)外，其餘3個皆為O(n*logn)，但由結果可知，雖bubble sort之運行時間明顯久於其他3個排序演算法，但為何quick sort之運行時間較merge sort、heap sort久?不是皆O(n*longn)嗎?
+而根據本書，除了bubble sort之時間複雜度為O(n^2)外，其餘3個皆為O(n*logn)，但由結果可知，雖bubble sort之運行時間明顯久於其他3個排序演算法，但為何quick sort之運行時間較merge sort、heap sort久?不是皆O(n*logn)嗎?
 </p>
 <p>
 我的猜測為：quicksort是先選取陣列中的一個值(程式中以陣列第一個元素作為鍵值)，再將陣列元素與其比較後分為2部分進行quicksort，但由於程式中之陣列為亂數生成，故第一個元素經常為極大值或極小值，而非此排序方法中理想之中間值(陣列中位數)，導致程式將陣列二分時經常分成2個元素數量懸殊2邊，使程式無法發揮分治法之精神。
